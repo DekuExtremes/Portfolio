@@ -33,29 +33,29 @@ a {
     margin-left: 15px;
 }
 
-.qk-links {
-    margin-top: 440px;
-    margin-left: 30px;
+.qk-links{
     position: absolute;
-    font-size: 28px;
+    top: 70vh; /* Adjust as needed */
+    left: 30px;
+    font-size: 2rem;
 }
-.qk-links2 {
-    margin-top: 490px;
-    margin-left: 30px;
+.qk-links2{
     position: absolute;
-    font-size: 28px;
+    top: 78vh; /* Adjust as needed */
+    left: 30px;
+    font-size: 2rem;
 }
-.qk-links3 {
-    margin-top: 540px;
-    margin-left: 30px;
+.qk-links3{
     position: absolute;
-    font-size: 28px;
+    top: 86vh; /* Adjust as needed */
+    left: 30px;
+    font-size: 2rem;
 }
 
 .hero-text {
     position: relative;
     z-index: 2; /* Ensure the text is on top of the video */
-    font-size: 72px;
+    font-size: 4.5rem;
     line-height: 115px;
     letter-spacing: -3.5px;
     margin-top: -45px;
@@ -64,7 +64,7 @@ a {
 }
 
 .s1 {
-    font-size: 102px;
+    font-size: 6.5rem;
     background: linear-gradient(to left, #038d94, #007885, #006475, #005063, #003d50);
     background-clip: text;
     color: transparent;
@@ -87,24 +87,24 @@ a {
     margin-top: 70px;
     color: rgb(225, 226, 226);
     font-weight: 800;
-    font-size: 18px;
+    font-size: 1.125rem;
     letter-spacing: 2.5px;
 }
 
 .ab-me {
-    font-size: 46px;
+    font-size: 2.875rem;
     letter-spacing: -1px;
     color: rgb(225, 226, 226);
     font-weight: 100;
 }
 
 .sk-me {
-    font-size: 68px;
+    font-size: 4.25rem;
     color: rgb(225, 226, 226);
 }
 
 .sk-desc {
-    font-size: 20px;
+    font-size: 1.25rem;
     margin-top: 35px;
     color: rgb(225, 226, 226);
 }
@@ -118,9 +118,13 @@ a {
     margin-top: 20px;
     background-size:cover; 
 }
+.pr-img:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    transform: scale(1.1);
+}
 
 .pr-me {
-    font-size: 46px;
+    font-size: 2.875rem;
     color: rgb(225, 226, 226);
 }
 
@@ -210,25 +214,16 @@ a:hover, .qk-links:hover, .qk-links2:hover, .qk-links3:hover {
     margin-top: 20px;
 }
 
-.copy-text::after {
-    content: 'Click to copy';
-    font-size: 12px;
-    transition: opacity 0.3s ease;
-}
-.copy-text:hover::after {
-    opacity: 1;
-}
-
 .ft-head {
     color: rgb(194, 194, 194);
     margin-top: 20px;
     margin-left: -5px;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 700;
 }
 
 .ft-links {
-    font-size: 36px;
+    font-size: 2.25rem;
 }
 
 .pr-bgi {
@@ -242,7 +237,7 @@ a:hover, .qk-links:hover, .qk-links2:hover, .qk-links3:hover {
 .video-container {
     position: absolute;
     width: 100%;
-    height: 104.5%;
+    height: 100vh;
     margin-left: -11px;
     margin-top: 35px;
     overflow: hidden;
@@ -277,5 +272,124 @@ a:hover, .qk-links:hover, .qk-links2:hover, .qk-links3:hover {
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0 cover 40%;
+}
+
+
+/* General Mobile Styles */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    nav {
+        display: none;
+    }
+
+
+
+    .hero-text {
+        font-size: 2.25rem;
+        line-height: 2;
+        margin-top: -20px;
+        letter-spacing: -1px;
+        word-spacing: -1px;
+    }
+
+    .s1 {
+        font-size: 3.2rem;
+        background: linear-gradient(to left, #038d94, #007885, #006475, #005063, #003d50);
+        background-clip: text;
+        color: transparent;
+    }
+
+    .logo {
+        width: 10%;
+    }
+
+    #hero-video {
+        height: 50vh; /* Reduce video height for mobile */
+        margin-top: -230px;
+    }
+
+    .r2 {
+        font-size: 16px;
+        margin-top: -40px;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .ab-me, .pr-me, .sk-me {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .sk-desc, .pr-desc, .p-info {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .pr-img {
+        height: 50px;
+        width: 50px;
+        border-radius: 25px;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    .blob {
+        display: none;
+    }
+
+    .footer {
+        min-height: 100px;
+    }
+
+    .submit {
+        margin-left: 20%;
+        width: 60%;
+    }
+
+    /* Adjust quick links */
+    .qk-links, .qk-links2, .qk-links3 {
+        display: none;
+    }
+
+    /* Adjust video container for mobile */
+    .video-container {
+        margin-top: -20px;
+        height: 100vh;
+    }
+
+    .video-container video {
+        opacity: 0.4; /* Keep transparency but adjust for mobile */
+    }
+
+    /* Reduce size of headings */
+    .ft-head {
+        font-size: 18px;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .ft-links {
+        font-size: 24px;
+        margin-left: 10px;
+    }
+    
+    /* Reduce size of project section background */
+    .pr-bgi {
+        opacity: 0.1;
+    }
+
+    /* General adjustments for smoother scrolling */
+    .block {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+    .p-info {
+        text-align: center;
+        margin-top: 20px;
+    }
 }
 
