@@ -313,7 +313,7 @@ a:hover, .qk-links:hover, .qk-links2:hover, .qk-links3:hover {
     }
 
     #hero-video {
-        height: 50vh; /* Reduce video height for mobile */
+        height: 88vh; /* Reduce video height for mobile */
         margin-top: -230px;
     }
 
@@ -363,7 +363,7 @@ a:hover, .qk-links:hover, .qk-links2:hover, .qk-links3:hover {
     /* Adjust video container for mobile */
     .video-container {
         margin-top: -20px;
-        height: 100vh;
+        height: 122vh;
     }
 
     .video-container video {
