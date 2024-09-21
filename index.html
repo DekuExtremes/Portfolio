@@ -43,7 +43,14 @@
 
         <!-- Section 1 Hero Section Starts -->
          <div class="row">
-            <div class="col-sm-12 text-center">
+            <div class="col-sm-6 hero-section-left">
+                <div class="intro-txt">
+                    <h2 class="int-txt">Hey! I am Sujit</h2>
+                    <h6 class="int-txt2"><span class="t-green">Full-Stack Developer</h6></span>
+                    <a href="#dir1" class="int-link">Know More...</a>
+                </div>
+            </div>
+            <div class="col-sm-6 text-center">
                 <video autoplay muted loop id="hero-video">
                     <source src="Images/hr-bg3.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -64,7 +71,7 @@
          <div class="row mt-1">
             <div class="col-sm-2"></div>
             <div class="col-sm-9">
-                <h1 class="ab-me"><span class="t-green">Full stack dev</span> who hasn't made a name for himself, yet. I try to make good websites. When I'm not debugging code, I'm probably debugging life—both with a smile.</h1>
+                <h1 class="ab-me"><span class="t-green">Full stack dev</span> with experience in <span class="t-green">Python Frameworks</span>. I make web applications that looks good & works great. When I'm not debugging code, I'm probably debugging life — both with a <span class="h-txt">smile</span>.</h1>
             </div>
             <div class="col-sm-1"></div>
          </div>
@@ -74,7 +81,7 @@
          <div class="row mt-5">
             <div class="col-sm-2"></div>
             <div class="col-sm-2">
-                <h4 class="r2">SKILLS I POSSESS</h4>
+                <h4 class="r3">SKILLS I POSSESS</h4>
             </div>
             <div class="col-sm-8"></div>
          </div>
@@ -307,7 +314,6 @@ document.addEventListener('mousemove', function(e) {
         const moveX = (mouseX - iconCenterX) * 0.1;
         const moveY = (mouseY - iconCenterY) * 0.1;
         closestIcon.style.transform = `translate(${moveX}px, ${moveY}px)`;
-
         currentFollowIcon = closestIcon;
     } else if (currentFollowIcon) {
         // Reset the current icon's position if it is not within the follow distance
