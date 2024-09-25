@@ -1,7 +1,6 @@
 html {
     scroll-behavior: smooth;
 }
-
 body {
     margin: 0;
     padding: 0;
@@ -16,7 +15,6 @@ nav {
     padding: 10px;
     margin-top: 5px;
 }
-
 a {
     color: rgb(183, 181, 181);
     text-decoration: none;
@@ -27,7 +25,6 @@ a {
 .icon {
     margin-top: 30px;
 }
-
 .logo {
     margin-top: 5px;
     margin-left: 15px;
@@ -52,8 +49,6 @@ a {
     font-size: 2rem;
 }
 
-
-
 .intro-txt {
     height: 300px;
     width: 600px;
@@ -65,10 +60,56 @@ a {
     font-size: 4.2rem;
 }
 .int-txt2 {
+    position: relative;
     font-size: 2rem;
     color: rgb(223, 222, 222);
     margin-top: 30px;
     margin-left: 1.5px;
+    width: 315px;
+    overflow: hidden;
+
+}
+.int-txt2::before{ 
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background-color: #007885;
+}
+.int-txt2::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background-color: #007885;
+}
+.int-txt2::before {
+    animation: reveal 2s ease forwards;
+}
+.int-txt2::after {
+    background-color: rgba(12,15,14,255);
+    animation: base 2s ease forwards;
+}
+
+@keyframes reveal {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(111%);
+    }
+}
+@keyframes base {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 .int-link:hover {
@@ -90,26 +131,12 @@ a {
     content: " (not really)";
     font-size: 28px;
 }
-
-
-.hero-section-right {
-    position: relative;
-    z-index: 2; /* Ensure the text is on top of the video */
-    font-size: 4.5rem;
-    line-height: 115px;
-    letter-spacing: -3.5px;
-    margin-top: -45px;
-    padding-bottom: 20px;
-    color: rgb(209, 209, 209); /* White color for clear visibility */
-}
-
 .s1 {
     font-size: 6.5rem;
     background-image: linear-gradient(to right bottom, #021b25, #032631, #04313e, #043c4b, #044858, #055164, #075a70, #0b637d, #1a6b8d, #2b739c, #3d7aab, #5281b9);
     background-clip: text;
     color: transparent;
 }
-
 #hero-video {
     position: absolute;
     top: 50%;
@@ -149,7 +176,6 @@ a {
     font-size: 4.25rem;
     color: rgb(225, 226, 226);
 }
-
 .sk-desc {
     font-size: 1.25rem;
     margin-top: 35px;
@@ -169,12 +195,10 @@ a {
     box-shadow: 0 0 20px rgba(30, 199, 255, 0.6);
     transform: scale(1.1);
 }
-
 .pr-me {
     font-size: 2.875rem;
     color: rgb(225, 226, 226);
 }
-
 .pr-desc {
     color: rgb(225, 226, 226);
 }
@@ -183,10 +207,33 @@ a {
     background-color: rgb(52, 52, 52);
     min-height: 200px;
 }
-
 .submit {
     margin-left: 37%;
     width: 30%;
+}
+.p-info {
+    color: rgb(194, 194, 194);
+    margin-top: 20px;
+}
+.p-info1 {
+    background-image: linear-gradient(to left top, #021b25, #032631, #04313e, #043c4b, #044858, #055164, #075a70, #0b637d, #1a6b8d, #2b739c, #3d7aab, #5281b9);
+    background-clip: text;
+    color: transparent;
+}
+.ft-head {
+    color: rgb(194, 194, 194);
+    margin-top: 20px;
+    margin-left: -5px;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+.ft-links {
+    font-size: 2.25rem;
+}
+.t-green {
+    background-image: linear-gradient(to right bottom, #021b25, #032631, #04313e, #043c4b, #044858, #055164, #075a70, #0b637d, #1a6b8d, #2b739c, #3d7aab, #5281b9);
+    background-clip: text;
+    color: transparent;
 }
 
 .blob {
@@ -199,11 +246,9 @@ a {
     transition: transform 0.1s ease, width 0.3s ease, height 0.3s ease, box-shadow 0.3s ease;
     z-index: -1;
 }
-
 .glow {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
 }
-
 .blob.active {
     width: 50px;
     height: 50px;
@@ -214,17 +259,10 @@ a, .qk-links, .qk-links2, .qk-links3 {
     cursor: none;
     z-index: 10000;
 }
-
 a:hover, .qk-links:hover, .qk-links2:hover, .qk-links3:hover {
     background-image: linear-gradient(to right bottom, #021b25, #032631, #04313e, #043c4b, #044858, #055164, #075a70, #0b637d, #1a6b8d, #2b739c, #3d7aab, #5281b9);
     background-clip: text;
     color: transparent;  /*Reminder to check the blob color for better readability. */
-}
-
-.t-green {
-    background-image: linear-gradient(to right bottom, #021b25, #032631, #04313e, #043c4b, #044858, #055164, #075a70, #0b637d, #1a6b8d, #2b739c, #3d7aab, #5281b9);
-    background-clip: text;
-    color: transparent;
 }
 
 
@@ -233,55 +271,27 @@ a:hover, .qk-links:hover, .qk-links2:hover, .qk-links3:hover {
     background-color: transparent; /* Initial background color */
     transition: background-color 0.3s ease; /* Smooth transition for background change */
 }
-
 /* Style for the skill name and description */
 .sk-me, .sk-desc {
     transition: color s ease; /* Smooth transition for text color change */
 }
-
 /* Hover effect on the skill name */
 .sk-me:hover {
     cursor: none; /* Changes cursor to pointer to indicate interactivity */
 }
-
 /* When hovering on the row, change the background and text color */
 .row.mt-2:hover {
     background-color: #056065; /* Background color on hover */
 }
-
 /* Change the text color of the skill name and description on row hover */
 .row.mt-2:hover .sk-desc {
     color: rgb(17, 17, 17); /* Text color on hover */
 }
-
 /* Ensures that .t-green text also changes color on row hover to stay visible */
 .row.mt-2:hover .sk-me .t-green {
     background-image: linear-gradient(to left top, #021b25, #032631, #04313e, #043c4b, #044858, #055164, #075a70, #0b637d, #1a6b8d, #2b739c, #3d7aab, #5281b9);
     background-clip: text;
     color: transparent; /* Change to a contrasting color, like gold */
-}
-
-.p-info {
-    color: rgb(194, 194, 194);
-    margin-top: 20px;
-}
-
-.p-info1 {
-    background-image: linear-gradient(to left top, #021b25, #032631, #04313e, #043c4b, #044858, #055164, #075a70, #0b637d, #1a6b8d, #2b739c, #3d7aab, #5281b9);
-    background-clip: text;
-    color: transparent;
-}
-
-.ft-head {
-    color: rgb(194, 194, 194);
-    margin-top: 20px;
-    margin-left: -5px;
-    font-size: 1.25rem;
-    font-weight: 700;
-}
-
-.ft-links {
-    font-size: 2.25rem;
 }
 
 .pr-bgi {
@@ -325,15 +335,13 @@ a:hover, .qk-links:hover, .qk-links2:hover, .qk-links3:hover {
         transform: translateX(0px);
     }
 }
-
 .block {
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0 cover 40%;
 }
 
-
-/* General Mobile Styles */
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
     body {
         overflow-x: hidden;
@@ -449,5 +457,88 @@ a:hover, .qk-links:hover, .qk-links2:hover, .qk-links3:hover {
         text-align: center;
         margin-top: 20px;
     }
+
+    .flex-cards {
+        flex-direction: column;
+    }
+}
+
+
+.flex-cards {
+    display: flex;
+    gap: 1em;
+    margin-left: 40px;
+}
+.flex-cards > * {
+    flex: 1;
+}
+
+.card1 {
+    height: 480px;
+    width: 400px;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: .1em;
+    justify-content: center;
+    align-items: center;
+}
+.card1 > * {
+    flex-grow: 1;
+}
+
+
+.tech-stack {
+    list-style: none;
+    font-size: 0.725rem;
+    margin-left: -30px;
+    display: flex;
+    gap: 1em;
+    flex-direction: row;
+}
+
+li {
+    background-color: #007885;
+    border-radius: 4px;
+    padding: 4px 6px 4px 6px;
+    color: rgb(225, 226, 226);
+    justify-content: flex-start;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+li:hover {
+    box-shadow: 0 0 10px 4px rgba(2, 125, 125, 0.7);
+    cursor: none;
+  }
+
+
+ .card-img {
+    height: 180px;
+    width: 350px;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: scale 0.3s ease-in-out;
+}
+.card-img:hover {
+    scale: 1.05;
+}
+.card-img img {
+    width: 110%;
+    background-size: cover;
+}
+.card-desc {
+    margin: 10px;
+    color: rgb(225, 226, 226);
+    font-weight: 400;
+    word-spacing: 1px;
+}
+.card-heading h4 {
+    color: rgb(225, 226, 226);
 }
 
