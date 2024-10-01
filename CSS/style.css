@@ -131,6 +131,7 @@ a {
     content: " (not really)";
     font-size: 28px;
 }
+
 .s1 {
     font-size: 6.5rem;
     background-image: linear-gradient(to right bottom, #021b25, #032631, #04313e, #043c4b, #044858, #055164, #075a70, #0b637d, #1a6b8d, #2b739c, #3d7aab, #5281b9);
@@ -166,15 +167,43 @@ a {
 }
 
 .ab-me {
+    position: relative;
     font-size: 2.875rem;
     letter-spacing: -1px;
     color: rgb(225, 226, 226);
     font-weight: 100;
 }
+.cutout3 {
+    position: absolute;
+    width: 15%;
+    z-index: -1;
+    right: 690px;
+    bottom: -420px;
+    transform: rotate(15deg);
+    filter: blur(1px);
+}
 
 .sk-me {
+    position: relative;
     font-size: 4.25rem;
     color: rgb(225, 226, 226);
+}
+.sk-zero {
+    position: absolute;
+    width: 5%;
+    left: 50px;
+    transform: rotate(-15deg);
+    filter: blur(1px);
+    top: -30px;
+}
+
+.sk-one {
+    position: absolute;
+    width: 5%;
+    right: 150px;
+    transform: rotate(15deg);
+    filter: blur(1px);
+    top: 40px;
 }
 .sk-desc {
     font-size: 1.25rem;
@@ -321,7 +350,7 @@ a:hover, .qk-links:hover, .qk-links2:hover, .qk-links3:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0.5; /* Adjust opacity for transparency */
+    opacity: 0.3;
 }
 
 
@@ -351,21 +380,54 @@ a:hover, .qk-links:hover, .qk-links2:hover, .qk-links3:hover {
         display: none;
     }
 
-
-
-    .hero-section-right {
-        font-size: 2.25rem;
-        line-height: 2;
-        margin-top: -20px;
-        letter-spacing: -1px;
-        word-spacing: -1px;
+    .int-txt {
+        font-size: 2.5rem;
+        margin-top: -100px;
+        word-spacing: 10px;
+    }
+    /* .cutout3 {
+      position: absolute;
+      width: 30%;
+      top: 185px;
+      left: 260px;
+      z-index: -1;
+    } 
+    .cutout2 {
+        position: absolute;
+        width: 20%;
+        top: 90px;
+        left: 75px;
+        transform: scaleX(-1);
+        z-index: -1;
+    } */
+    .cutout1, .cutout2, .cutout3 {
+        display: none;
     }
 
-    .s1 {
-        font-size: 3.2rem;
-        background: linear-gradient(to left, #038d94, #007885, #006475, #005063, #003d50);
-        background-clip: text;
-        color: transparent;
+    .intro-txt {
+        height: 50%;
+        width: 50%;
+    }
+    .int-txt2 {
+        font-size: 1.2rem;
+        width: 110%;
+        
+        margin-top: 5px;
+    }
+    .int-link {
+        font-size: 1rem;
+        width: 110px;
+        text-align: center;
+    }
+
+    .hr-img {
+        display: none;
+    }
+    .hr-img img {
+        display: none;
+    }
+    .sk-zero, .sk-one {
+        display: none;
     }
 
     .logo {
@@ -373,21 +435,22 @@ a:hover, .qk-links:hover, .qk-links2:hover, .qk-links3:hover {
     }
 
     #hero-video {
-        height: 88vh; /* Reduce video height for mobile */
+        height: 50vh; /* Reduce video height for mobile */
         margin-top: -230px;
     }
 
-    .r2 {
+    .r2, .r3 {
         font-size: 16px;
-        margin-top: -40px;
         text-align: center;
         font-weight: 600;
+        margin-top: 50px;
     }
 
     .ab-me, .pr-me, .sk-me {
         font-size: 28px;
         margin-bottom: 20px;
     }
+
 
     .sk-desc, .pr-desc, .p-info {
         font-size: 14px;
@@ -424,6 +487,7 @@ a:hover, .qk-links:hover, .qk-links2:hover, .qk-links3:hover {
     .video-container {
         margin-top: -20px;
         height: 122vh;
+        display: none;
     }
 
     .video-container video {
@@ -460,6 +524,24 @@ a:hover, .qk-links:hover, .qk-links2:hover, .qk-links3:hover {
 
     .flex-cards {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card1 {
+        margin-left: -30px;
+    }
+    .card-heading h4{
+        font-size: .95rem;
+    }
+    .card-desc {
+        font-size: .8rem;
+    }
+    li {
+        font-size: .5rem;
+    }
+    .card-img {
+        height: 80%;
+        width: 70%;
     }
 }
 
@@ -472,24 +554,57 @@ a:hover, .qk-links:hover, .qk-links2:hover, .qk-links3:hover {
 .flex-cards > * {
     flex: 1;
 }
-
 .card1 {
-    height: 480px;
-    width: 400px;
+    position: relative;
+    height: 100%;
+    width: 100%;
     padding: 10px;
-    border: 2px solid white;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     gap: .1em;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(to right top, #3e3e3e, #333333, #292929, #1f1f1f, #151515, #1a191c, #201d22, #272128, #373747, #3b5267, #376f81, #3d8d8f);
+
+}
+.card1::after {
+    position: absolute;
+    content: "";
+    top: 15px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.9) translateZ(0);
+    filter: blur(15px);
+    background: linear-gradient(
+      to left,
+      #ff5770,
+      #e4428d,
+      #c42da8,
+      #9e16c3,
+      #6501de,
+      #9e16c3,
+      #c42da8,
+      #e4428d,
+      #ff5770
+    );
+    background-size: 200% 200%;
+    animation: animateGlow 1.25s linear infinite;
+  }
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
 }
 .card1 > * {
     flex-grow: 1;
 }
-
-
 .tech-stack {
     list-style: none;
     font-size: 0.725rem;
@@ -498,7 +613,6 @@ a:hover, .qk-links:hover, .qk-links2:hover, .qk-links3:hover {
     gap: 1em;
     flex-direction: row;
 }
-
 li {
     background-color: #007885;
     border-radius: 4px;
@@ -507,16 +621,13 @@ li {
     justify-content: flex-start;
     transition: box-shadow 0.3s ease-in-out;
 }
-
 li:hover {
     box-shadow: 0 0 10px 4px rgba(2, 125, 125, 0.7);
     cursor: none;
   }
-
-
  .card-img {
-    height: 180px;
-    width: 350px;
+    height: 100%;
+    width: 100%;
     border-radius: 0 0 10px 10px;
     overflow: hidden;
     margin: 5px;
@@ -526,7 +637,7 @@ li:hover {
     transition: scale 0.3s ease-in-out;
 }
 .card-img:hover {
-    scale: 1.05;
+    scale: 0.97;
 }
 .card-img img {
     width: 110%;
@@ -541,4 +652,7 @@ li:hover {
 .card-heading h4 {
     color: rgb(225, 226, 226);
 }
+
+
+
 
