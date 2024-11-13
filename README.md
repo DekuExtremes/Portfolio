@@ -8,6 +8,6 @@ This is my personal portfolio website showcasing my skills, projects, and passio
 - Cursor-Following Animation: A custom blob follows the cursor, adding a fun and interactive touch to the user experience.
 - Mobile Responsive Design: Optimized for both desktop and mobile viewing.
 
-Feel free to explore the [live demo](https://dekuextremes.github.io/Portfolio/) and the code behind it. Contributions, feedback, and suggestions are always welcome!
+Feel free to explore the [portfolio](https://dekuextremes.github.io/Portfolio/) and the code behind it. Contributions, feedback, and suggestions are always welcome!
 
 >![d](https://github.com/user-attachments/assets/9adf295d-1bf2-4cfd-8cd6-e5fb7a6384a1)
